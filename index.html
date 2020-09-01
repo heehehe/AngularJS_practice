@@ -19,6 +19,8 @@
         </div>
       </form>
 
+      <pre> {{todoForm | json}} </pre>
+
       <ul>
         <li ng-repeat="todo in todos | filter: statusFilter">
           <input type="text" ng-model="todo.title">
@@ -33,7 +35,7 @@
       <button ng-click="statusFilter={completed:true}"> Completed </button>
       <button ng-click="statusFilter={completed:false}"> Active </button>
       <button ng-click="statusFilter={}"> All </button>
-      
+
     </div>
   </body>
 </html>
