@@ -12,6 +12,9 @@
         <li ng-repeat="todo in todos">
           <input type="text" ng-model="todo.title">
           <input type="checkbox" ng-model="todo.completed">
+          <span>
+            <button type="button" ng-click="remove(todo)"> Delete </button>
+          </span>
           <date> {{ todo.createdAt | date : 'yyyy-MM-dd HH:mm:ss' }} </date>
         </li>
       </ul>
