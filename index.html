@@ -6,7 +6,11 @@
     <script src="lib/script.js"></script>
   </head>
 
-  <body ng-app ng-init="name = 'Heeseon'">
-      <h1>Hello {{name}}</h1>
+  <body ng-app="todo" ng-controller="TodoCtrl">
+      <h1> Todo </h1>
+      <input type="text" ng-model="todo.title">
+      <input type="checkbox" ng-model="todo.completed">
+      <date> {{ todo.createdAt }} </date>
+      <br> {{ todo }}
   </body>
 </html>
