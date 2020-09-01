@@ -7,9 +7,10 @@
   </head>
 
   <body ng-app="todo" ng-controller="TodoCtrl">
+    <div class="container">
       <h1> Todo </h1>
       <ul>
-        <li ng-repeat="todo in todos">
+        <li ng-repeat="todo in todos | filter: statusFilter">
           <input type="text" ng-model="todo.title">
           <input type="checkbox" ng-model="todo.completed">
           <span>
@@ -18,5 +19,9 @@
           <date> {{ todo.createdAt | date : 'yyyy-MM-dd HH:mm:ss' }} </date>
         </li>
       </ul>
+      <button ng-click="statusFilter={completed:true}"> Completed </button>
+      <button ng-click="statusFilter={completed:false}"> Active </button>
+      <button ng-click="statusFilter={}"> All </button>
+    </div>
   </body>
 </html>
