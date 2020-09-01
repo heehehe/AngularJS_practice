@@ -8,9 +8,12 @@
 
   <body ng-app="todo" ng-controller="TodoCtrl">
       <h1> Todo </h1>
-      <input type="text" ng-model="todo.title">
-      <input type="checkbox" ng-model="todo.completed">
-      <date> {{ todo.createdAt }} </date>
-      <br> {{ todo }}
+      <ul>
+        <li ng-repeat="todo in todos">
+          <input type="text" ng-model="todo.title">
+          <input type="checkbox" ng-model="todo.completed">
+          <date> {{ todo.createdAt }} </date>
+        </li>
+      </ul>
   </body>
 </html>
