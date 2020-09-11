@@ -1,0 +1,14 @@
+<form name="todoForm" ng-submit="add(newTodoTitle)">
+
+  <div class="input-group">
+    <input type="text" class="form-control" ng-model="newTodoTitle" placeholder="Input new to do" minlength="3">
+    <span>
+      <button type="submit"> Add </button>
+    </span>
+  </div>
+
+  <div ng-show="todoForm.$dirty && todoForm.$invalid">
+    <div role="alert"> Input minlength is 3 </div>
+  </div>
+  
+</form>
