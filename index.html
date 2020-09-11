@@ -4,6 +4,7 @@
   <head>
     <link rel="stylesheet" href="lib/style.css" />
     <script src="lib/script.js"></script>
+    <script src="lib/directive.js"></script>
   </head>
 
   <body ng-app="todo" ng-controller="TodoCtrl">
@@ -30,13 +31,7 @@
 
       <ul>
         <li ng-repeat="todo in todos | filter: statusFilter">
-          <!-- <input type="text" ng-model="todo.title">
-          <input type="checkbox" ng-model="todo.completed">
-          <span>
-            <button type="button" ng-click="remove(todo)"> Delete </button>
-          </span> -->
           <todo-item></todo-item>
-          <date> {{ todo.createdAt | date : 'yyyy-MM-dd HH:mm:ss' }} </date>
         </li>
       </ul>
 
